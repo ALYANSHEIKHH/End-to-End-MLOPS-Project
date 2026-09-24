@@ -127,6 +127,8 @@ class DataTransformation:
             # Apply custom transformations in specified sequence
             input_feature_train_df = self._map_gender_column(input_feature_train_df)
             input_feature_train_df = self._drop_id_column(input_feature_train_df)
+            print("Columns after dropping id:")
+            print(input_feature_train_df.columns.tolist())
             input_feature_train_df = self._create_dummy_columns(input_feature_train_df)
             input_feature_train_df = self._rename_columns(input_feature_train_df)
 
